@@ -1,3 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(255, 250, 244);
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+h1{
+    margin: 20px 0 50px 0;
+}
+p{
+    margin: 10px 0;
+}
 body {
 	font-family: 'Malgun Gothic', Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size:11pt;
@@ -30,8 +51,6 @@ select {
 }
 div {
     width: 810px;
-    margin: 10px;
-    border: 1px solid #ccc;
 }
 .remove-btn {
     background-color: white; /* Red */
@@ -42,4 +61,27 @@ div {
 li {
     margin: 0px;
     padding: 0px;
+}
+.btn_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+button{
+    width: 80px;
+    height: 30px;
+    background: white;
+    
+    border: none;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 5px gray;
+    border-radius: 10px;
+}
+.asd{
+    display: flex;
+    padding-left: 40px;
+    align-items: center;
+}
+.asd > ol{
+    margin: 30px 0;
 }
