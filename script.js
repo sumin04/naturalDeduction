@@ -53,7 +53,21 @@ addPrimaryBtn.addEventListener('click', function(){
 
 addSymbolicBtn.addEventListener('click', function () {
     let li = document.createElement('li');
-    li.textContent = `${newSymbolic.value} ,,${ns1.value}${ns2.value ? ', ' + ns2.value : ''}${ns3.value ? ', ' + ns3.value : ''}, ${rule.value}`;
+
+    // 텍스트 구성
+    let mainText = `${newSymbolic.value}`;
+    let sources = `${ns1.value}${ns2.value ? ', ' + ns2.value : ''}${ns3.value ? ', ' + ns3.value : ''}`;
+    let ruleText = rule.value;
+
+    // HTML 분리 삽입
+    li.innerHTML = `
+        <span class="main-text">${mainText}</span>
+        <span class="meta-text">,,, ${sources}, ${ruleText}</span>
+    `;
+
+    // 스타일 클래스 적용
+    li.classList.add('justify-text');
+    console.log('추가된 li 내용:', li.textContent);
 
     let btn = document.createElement('button');
     btn.textContent = '[X]';
@@ -73,6 +87,8 @@ addSymbolicBtn.addEventListener('click', function () {
     rule.selectedIndex = 0;
     newSymbolic.focus();
 });
+
+
 
 document.querySelector('#not-btn').addEventListener('click', () => insertAtCursor(symbolicInput, '∼'));
 document.querySelector('#and-btn').addEventListener('click', () => insertAtCursor(symbolicInput, '∧'));

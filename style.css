@@ -85,3 +85,11 @@ button{
 .asd > ol{
     margin: 30px 0;
 }
+.justify-text {
+    text-align: justify;
+}
+.meta-text {
+    display: inline-block;
+    margin-left: 250px;
+    color: blue;
+}
